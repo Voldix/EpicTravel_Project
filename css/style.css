@@ -1,0 +1,561 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,700,800);
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    color: #000;
+}
+
+a {
+    color: #81b4bd;
+    text-decoration: underline;
+}
+
+.sticky-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.container.container-small {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+/* Header */
+
+.header {
+    position: relative;
+    padding: 40px 0;
+    z-index: 9999;
+}
+
+.header-bg {
+    background-color: #f6f6f6;
+}
+
+.header-white-bg {
+    background-color: #fff !important;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 60px; /* страховка */
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+}
+
+.nav-list a {
+    color: #000;
+    transition: color 0.2s ease-in;
+}
+
+.nav-list a.active {
+    color: #81b4bd;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: #00ceb5;
+}
+
+.btn-mobile-nav {
+    display: none;
+}
+
+/* Mobile navigation */
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6f6;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9;
+    display: none;
+}
+
+.mobile-nav.open {
+    display: flex;
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile-nav-list a {
+    color: #000;
+}
+
+/* Main page */
+/* Promo */
+
+.promo {
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    height: 500px;
+    color: #fff;
+    background-image: url("../img/main/promo.jpg");
+    background-position: center; /* страховка */
+    background-size: cover; /* растягиваем на весь блок */
+    border-radius: 40px;
+}
+/* для устройств с повышенной четкостью пикселей делаем медиа запрос*/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .promo {
+        background-image: url("../img/main/promo@2x.jpg");
+    }
+}
+
+.promo-title {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.promo-subtitle {
+    font-size: 24px;
+}
+
+/* Main content */
+
+.main-content {
+    padding: 90px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.content-row.content-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.content-img {
+    flex-shrink: 0; /* убираем сжатие изображения */
+    border-radius: 40px;
+    overflow: hidden; /* скрыть элементы, что выходят за пределы контейнера (углы изображения) */
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.title-1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.title-1 span {
+    color: #81b4bd;
+}
+
+.title-2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.title-3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.content-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.content-text a {
+    color: #81b4bd;
+    text-decoration: underline;
+    transition: text-shadow 0.2s ease-in;
+}
+
+.content-text a:hover,
+.content-text a:focus {
+    text-shadow: 0 0 0.75px #81b4bd;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: auto;
+    padding: 60px 0;
+    background-color: #111;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px; /* Страховка */
+}
+
+.footer-copyright {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-contacts {
+    text-align: right;
+}
+
+.footer-phone {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.footer-email {
+    display: inline-block; /* переводим в инлайн блок, чтоб сработал маржин*/
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #00ceb5;
+}
+
+.footer-address {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Inner pages */
+
+.inner-page {
+    padding: 90px 0;
+}
+
+.inner-page-title-wrapper {
+    margin-bottom: 60px;
+}
+
+/* Tours page */
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 30px;
+}
+
+.card {
+    width: 370px;
+}
+
+.card-img {
+    display: block;
+    margin-bottom: 20px;
+    overflow: hidden; /* чтобы картинка не выходила за пределы скругления */
+    border-radius: 20px;
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.card-description p {
+    line-height: 1.5;
+}
+
+.card-description a {
+    color: #81b4bd;
+    text-decoration: underline;
+    transition: text-shadow 0.2s ease-in;
+}
+
+.card-description a:hover,
+.card-description a:focus {
+    text-shadow: 0 0 0.75px #81b4bd;
+}
+
+/* About page */
+
+/* .article-content {
+    margin: 0 auto;
+    width: 970px;
+} */
+
+.article-img {
+    margin: 40px 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.article-content p + p {
+    margin-top: 30px;
+}
+
+/* Contact page */
+
+.contact-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: flex-start; /* чтоб форма не растягивалась вниз при добавлении контента справа вниз */
+}
+
+/* Form */
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 30px;
+    width: 600px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 5px 25px 0 rgba(211, 211, 211, 0.5);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.inputs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.input {
+    padding: 14px 20px;
+    height: 50px;
+    border-radius: 2px;
+    border: 1px solid #b5dee5;
+    background: #eff9fb;
+    color: #36727d;
+    width: 100%;
+}
+
+.input.input-50 {
+    /* используется для размещения флекс элементов на одной строке ОДНОГО РАЗМЕРА (если разные паддинги, то и размеры будут разные) */
+    flex: 1; /* grow 1 shrink 1 basis 0 */
+}
+
+.input::placeholder {
+    font-weight: 500;
+    color: #9eccd4;
+}
+
+/* Radio btns */
+
+.radio-list,
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.radio-list label,
+.checkbox-list label {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+/* когда будет много текста на моб версии, чтоб чек и радио не уменьшались по размеру по отношению к другим */
+.radio-list label input,
+.checkbox-list label input {
+    flex-shrink: 0;
+}
+
+.real-radio {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+.custom-radio {
+    position: relative;
+    display: inline-block; /* для корректной работы рамки, размеры и тд...*/
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid #b5dee5;
+    background: #eff9fb;
+}
+
+.custom-radio::after {
+    content: "";
+    position: absolute;
+    display: inline-block; /* для корректной работы рамки, размеры и тд...*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background: #37b6cc;
+    transition: all 0.2s ease-in;
+}
+
+.real-radio:checked + .custom-radio::after {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Checkboxes */
+
+.real-checkbox {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Делаем подцветку чекбокса при табуляции */
+.real-checkbox:focus + .custom-checkbox {
+    box-shadow: 0 0 0 1px #b5dee5, 0 0 3px #36727d;
+}
+
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: #eff9fb;
+    border: 1px solid #b5dee5;
+}
+
+.custom-checkbox::after {
+    content: "";
+    /* Рисуем галочку */
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    /* Вставляем галочку */
+    background-image: url("../img/icons/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* выравниваем по центру */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0); /*анимация через маштаб*/
+    transition: 0.2s ease-in;
+}
+
+/* когда выбран реальный checkbox, только тогда выбран декоративный */
+.real-checkbox:checked + .custom-checkbox::after {
+    display: block;
+    transform: translate(-50%, -50%) scale(1); /*анимация через маштаб*/
+}
+
+/* Button */
+
+.form-btn {
+    padding: 12px 36px;
+    height: 50px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px 0 rgba(129, 180, 189, 0.35);
+    background: #81b4bd;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+
+    align-self: flex-start; /*отдельное выравнивание для этошо элемента по поперечной оси*/
+
+    transition: opacity 0.2s ease-in, background 0.2s ease-in;
+}
+
+.form-btn:hover,
+.form-btn:focus {
+    opacity: 0.8;
+}
+
+.form-btn:active {
+    opacity: 1;
+    background: #36727d;
+}
+
+/* Address */
+
+.address-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    width: 470px;
+}
+
+.address-item,
+.address-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.address-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iframe-map {
+    width: 100%;
+    height: 375px;
+}

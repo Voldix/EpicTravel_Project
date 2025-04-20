@@ -1,0 +1,124 @@
+/* Tablets */
+
+@media (max-width: 1199px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .container {
+        width: 768px;
+    }
+
+    .nav-list {
+        column-gap: 30px;
+    }
+
+    .promo {
+        padding-left: 20px;
+        height: 350px;
+        border-radius: 20px;
+    }
+
+    .promo-title {
+        margin-bottom: 0;
+        font-size: 40px;
+    }
+
+    .promo-subtitle {
+        font-size: 18px;
+    }
+
+    .main-content {
+        padding: 60px 0;
+    }
+
+    .content-row {
+        align-items: flex-start;
+        column-gap: 30px;
+    }
+
+    .content-img,
+    .content-text {
+        /* grow 1 shrink 1 basis 0% */
+        flex: 1;
+    }
+
+    .content-img {
+        border-radius: 20px;
+    }
+
+    .title-1 {
+        font-size: 38px;
+    }
+
+    .content-text {
+        row-gap: 10px;
+    }
+
+    .content-text p {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer-row {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-contacts {
+        text-align: left;
+    }
+
+    /* Inner page */
+
+    .inner-page {
+        padding: 60px 0;
+    }
+
+    .inner-page-title-wrapper {
+        margin-bottom: 40px;
+    }
+
+    /* Tours page */
+
+    .cards-wrapper {
+        row-gap: 40px;
+    }
+
+    .card {
+        width: 354px;
+    }
+
+    /* About page */
+
+    .container.container-small {
+        width: 768px;
+    }
+
+    .article-content p {
+        font-size: 16px;
+    }
+
+    /* Contacts */
+
+    .contact-columns {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    .address-wrapper {
+        width: 100%;
+        row-gap: 40px;
+    }
+
+    .form-wrapper {
+        width: 100%;
+    }
+}
