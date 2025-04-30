@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,700,800);
+@import "./../fonts/fonts.css";
 
 body {
     font-family: "Manrope", sans-serif;
@@ -125,7 +125,7 @@ a {
     padding-left: 70px;
     height: 500px;
     color: #fff;
-    background-image: url("../img/main/promo.jpg");
+    background-image: url("../img/main/promo-bg.png");
     background-position: center; /* страховка */
     background-size: cover; /* растягиваем на весь блок */
     border-radius: 40px;
@@ -133,7 +133,7 @@ a {
 /* для устройств с повышенной четкостью пикселей делаем медиа запрос*/
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .promo {
-        background-image: url("../img/main/promo@2x.jpg");
+        background-image: url("../img/main/promo-bg@2x.png");
     }
 }
 
